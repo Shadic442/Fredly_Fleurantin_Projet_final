@@ -1,0 +1,26 @@
+p {
+  margin: 0;
+  padding: 0;
+}
+
+#pageExercicerows {
+  padding-left: 0px;
+  
+}
+
+#cardcontainer {
+  padding-left: 0px;
+  margin-top: 10px;
+  padding-top: 10px;
+  float: right;
+  display: grid;
+  grid-gap: 2%;
+  grid-template-columns: repeat(auto-fill, minmax(300px, max-content));
+  height: 800px; /* assumed height, use an appropriate value */
+  overflow: scroll;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: default;
+}

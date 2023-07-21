@@ -1,0 +1,468 @@
+.customNavBarPhotoCSS {
+  cursor: pointer;
+}
+
+/* Nav Bar */
+.navbar {
+  padding: 100;
+}
+
+/* Page Inscription */
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #fd0800;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to bottom right,
+    rgb(0, 255, 208),
+    rgb(255, 1, 35)
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to bottom right,
+    rgb(246, 254, 7) rgb(152, 135, 87)
+  );
+}
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+}
+.card-registration .select-arrow {
+  top: 13px;
+}
+
+/* animation quand tu hover dessus */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.nav-link::before,
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #e65454;
+  transform: scaleX(0);
+  transition: transform 0.25s;
+}
+
+.nav-link::before {
+  top: -3px;
+  transform-origin: left;
+}
+
+.nav-link::after {
+  bottom: -3px;
+  transform-origin: right;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* fin de lanimation */
+
+/*--------------------------------------------- card ---------------------------------------------------------------*/
+/* Float four columns side by side */
+.column {
+  float: left;
+  padding: 0 10px;
+  width: 20%;
+}
+
+/* Style the card container */
+.cardMusculation {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+  font-family: arial;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* Style the image container */
+.image {
+  width: 100%;
+  height: 200px;
+  background-color: #555;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Style the image */
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+/* Style the card content */
+.content {
+  padding: 10px;
+}
+
+/* Style the card title */
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+/* Style the card description */
+.description {
+  color: black;
+  font-size: 14px;
+}
+
+/* Style the card button */
+.button {
+  border: none;
+  outline: none;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* Style the hover state of the card */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Style the hover state of the image */
+.image:hover img {
+  transform: scale(1.1);
+}
+
+/* Style the hover state of the button */
+.button:hover {
+  background-color: #555;
+}
+/*--------------------------------------------- Fin des cards ---------------------------------------------------------------*/
+
+/*---------------------------------------------------- slides ---------------------------------------------------------------*/
+.slides {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background-color: black;
+}
+
+.slides::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  background-color: rgb(0 0 0 / 25%);
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: cycle 12s infinite;
+}
+
+.slide-2 {
+  animation-delay: 4s;
+}
+
+.slide-3 {
+  animation-delay: 8s;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes cycle {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  30% {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.centered {
+  font-size: 7em;
+  color: #ffffff;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.center-twa {
+  margin: auto;
+  width: 70%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*--------------------------------------------- Fin des slides ---------------------------------------------------------------*/
+
+#box {
+  background-color: #212529;
+}
+
+#paddingDesBouton {
+  gap: 10px;
+}
+
+/* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 180px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/*--------------------------------------------- debut boutons multicolor ---------------------------------------------------------------*/
+
+.boutonHover {
+  --border-radius: 25px;
+  --border-width: 7px;
+  appearance: none;
+  position: relative;
+  padding: 1em 2em;
+  border: 0;
+  background-color: #212121;
+  font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffff;
+  z-index: 2;
+}
+
+.boutonHover::after {
+  --m-i: linear-gradient(#000, #000);
+  --m-o: content-box, padding-box;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: var(--border-width);
+  background-image: conic-gradient(
+    #ff0080,
+    #ff0080,
+    #ff0080,
+    #ff0080,
+    #ff0080,
+    #ff0080,
+    #ff0080
+  );
+  -webkit-mask-image: var(--m-i), var(--m-i);
+  mask-image: var(--m-i), var(--m-i);
+  -webkit-mask-origin: var(--m-o);
+  mask-origin: var(--m-o);
+  mask-clip: var(--m-o);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  filter: hue-rotate(0);
+  animation: rotate-hue634 linear 500ms infinite;
+  animation-play-state: paused;
+  border-radius: 20px;
+  border-color: #000;
+}
+
+.boutonHover:hover::after {
+  animation-play-state: running;
+  border-radius: 10px;
+}
+
+@keyframes rotate-hue634 {
+  to {
+    filter: hue-rotate(1turn);
+  }
+}
+
+.boutonHover,
+.boutonHover::after {
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.boutonHover:active {
+  --border-width: 5px;
+}
+
+.bn {
+  padding: 0.9em 1.6em;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 17px;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 32px;
+}
+
+.bn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(46, 46, 46);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.bn::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #f6fffc,
+    #9d8e93,
+    #f6fffc,
+    #554e4e,
+    #554e4e,
+    #f6fffc,
+    #9d8e93,
+    #f6fffc
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing345 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 20px;
+  opacity: 0;
+}
+
+@keyframes glowing345 {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 400% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.bn:hover::before {
+  opacity: 1;
+}
+
+.bn:active:after {
+  background: transparent;
+}
+
+.bn:active {
+  color: #000;
+  font-weight: bold;
+}
+
+.msgErreur {
+  color: rgb(255, 50, 50);
+}
+
+.image-profile-cropper {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.image-profile-cropper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bougerAgauche{
+ padding-right: 10px; 
+}
+.bougerAdroite{
+ padding-right: 10px; 
+}
