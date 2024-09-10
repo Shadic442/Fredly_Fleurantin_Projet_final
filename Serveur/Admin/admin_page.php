@@ -51,14 +51,14 @@ if ($_SESSION['role'] == "M") {
                 <hr>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li>
-                        <button class="nav-link link-dark" onClick='genererCRUDMembres(),chargerMembresAJAX()'>Liste
+                        <button class="nav-link link-dark" onClick='genererCRUDMembres(),chargerMembresAJAX()'>Liste des
                             membres</button>
                     </li>
                     <li>
-                        <button class="nav-link link-dark" onClick='genererAjouterExercice()'>Ajouter Exercice</button>
+                        <button class="nav-link link-dark" onClick='genererAjouterExercice()'>Ajouter un exercice</button>
                     </li>
                     <li>
-                        <button class="nav-link link-dark" onClick='chargerExerciceAdminAJAX()'>Liste Exercice</button>
+                        <button class="nav-link link-dark" onClick='chargerExerciceAdminAJAX()'>Liste d'exercice</button>
                     </li>
 
                 </ul>
